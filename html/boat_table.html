@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Både - Roskilde Bådklub</title>
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+<!-- Main -->
+<main>
+    <div>
+        <h1>Oversigt - Både</h1>
+    </div>
+
+    <div class="container">
+        <div>
+            <!--SEARCHBAR-->
+            <label for="inpSearch"></label>
+            <input type="text" required name="search" onkeyup="searchFunction('table')" placeholder="Search"
+                   id="inpSearch">
+        </div>
+
+        <!--LINK-->
+        <a href="race_table.html">Kapsejladser</a>
+    </div>
+
+    <div>
+        <table id="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Navn</th>
+                <th>Længde (fod)</th>
+                <th>Kategori</th>
+                <th>
+                    <!-- Button trigger modal -->
+                    <button id="registerButton" type="button">
+                        Registrer Båd
+                    </button>
+                </th>
+            </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <!-- Add this modal HTML structure after the </main> tag -->
+    <div id="modalForm" class="modal">
+        <div class="modal-content">
+            <h2 id=modalFormTitle></h2>
+            <span class="close">&times;</span>
+            <form id="form">
+                <input type="hidden" id="inpId" name="id">
+                <label for="inpName">Navn:</label>
+                <input type="text" id="inpName" name="name" required>
+                <label for="inpLength">Længde:</label>
+                <input type="number" id="inpLength" name="length" min="0" step="1" placeholder="længde i fod" required>
+                <button type="submit" id="saveButton">Gem</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="/js/search.js"></script>
+<script src="/js/boat_table.js"></script>
+</body>
+</html>

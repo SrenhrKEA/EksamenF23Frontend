@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kapsejladser - Roskilde Bådklub</title>
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+<!-- Main -->
+<main>
+    <div>
+        <h1>Oversigt - Kapsejladser</h1>
+    </div>
+
+
+    <div class="container">
+        <!--SEARCHBAR-->
+        <div>
+            <label for="inpSearch"></label>
+            <input type="text" required name="search" onkeyup="searchFunction('table')" placeholder="Search"
+                   id="inpSearch">
+        </div>
+
+        <!--LINK-->
+        <a href="boat_table.html">Både</a>
+    </div>
+
+
+    <!--TABLE-->
+    <div>
+        <table id="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Kategori</th>
+                <th>Dato</th>
+                <th>Tilmeldte Både</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <!--MODAL - PARTICIPANTS -->
+    <div id="modalForm" class="modal">
+        <div class="modal-content">
+            <h2 id=modalFormTitle></h2>
+            <span class="close">&times;</span>
+            <form id="form">
+                <input type="hidden" id="inpId" name="id">
+                <label for="inpBoats">Både:</label>
+                <select id="inpBoats" multiple>
+                    <option disabled>Vælg både...</option>
+                </select>
+                <button type="submit" class="saveButton">Gem</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL - POINTS -->
+    <div id="scoreboardModal" class="modal">
+        <div class="modal-content">
+            <h2 id=modalTitle></h2>
+            <span class="close">&times;</span>
+            <form id="formScorboard">
+            <table id="scoreboard">
+                <tr>
+                    <th>Båd</th>
+                    <th>Position</th>
+                </tr>
+            </table>
+                <button type="submit" class="saveButton">Gem</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="/js/search.js"></script>
+<script src="/js/race_table.js"></script>
+</body>
+</html>
