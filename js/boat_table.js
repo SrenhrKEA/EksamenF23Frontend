@@ -1,6 +1,6 @@
 let form = document.getElementById('form');
 let addButton = document.getElementById('registerButton');
-let modalTitle = document.getElementById('modalFormTitle');
+let modalTitle = document.getElementById('modalTitle');
 
 /* -- GENERATE TABLE -- */
 fetch('http://localhost:8080/boat/list')
@@ -33,7 +33,7 @@ addButton.addEventListener('click', function () { /*TODO: tilføjet nulstilling 
     document.getElementById("inpLength").value = null
     modalTitle.textContent = 'Registrer Båd'
     form.action = 'http://localhost:8080/boat/register';
-    openModalForm()
+    openModal()
 });
 
 /*-- EDIT BUTTON -- */
@@ -47,7 +47,7 @@ function editBoat(obj) {
     document.getElementById("inpLength").value = boat.length
     modalTitle.textContent = 'Opdater'
     form.action = 'http://localhost:8080/boat/edit';
-    openModalForm()
+    openModal()
 }
 
 /*-- DELETE BUTTON -- */
@@ -62,15 +62,15 @@ function deleteBoat(id) {
 }
 
 /* -- MODAL -- */
-function openModalForm() {
+function openModal() {
     // Display the modal
-    document.getElementById('modalForm').style.display = 'block';
+    document.getElementById('modal').style.display = 'block';
 }
 
 // Modal close button
 const closeBtn = document.getElementsByClassName('close')[0];
 closeBtn.onclick = function () {
-    document.getElementById('modalForm').style.display = 'none';
+    document.getElementById('modal').style.display = 'none';
 };
 
 /*-- FORM SUBMIT -- */
