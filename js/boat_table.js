@@ -27,7 +27,10 @@ fetch('http://localhost:8080/boat/list')
     });
 
 /*-- REGISTER BUTTON -- */
-addButton.addEventListener('click', function () {
+addButton.addEventListener('click', function () { /*TODO: tilføjet nulstilling af values */
+    document.getElementById('inpId').value = null
+    document.getElementById("inpName").value = null
+    document.getElementById("inpLength").value = null
     modalTitle.textContent = 'Registrer Båd'
     form.action = 'http://localhost:8080/boat/register';
     openModalForm()

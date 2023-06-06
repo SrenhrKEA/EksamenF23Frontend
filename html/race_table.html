@@ -17,7 +17,7 @@
         <!--SEARCHBAR-->
         <div>
             <label for="inpSearch"></label>
-            <input type="text" required name="search" onkeyup="searchFunction('table')" placeholder="Search"
+            <input type="text" required name="search" onkeyup="searchFunction('tableRaces')" placeholder="Search"
                    id="inpSearch">
         </div>
 
@@ -28,7 +28,7 @@
 
     <!--TABLE-->
     <div>
-        <table id="table">
+        <table id="tableRaces">
             <thead>
             <tr>
                 <th>ID</th>
@@ -36,18 +36,19 @@
                 <th>Dato</th>
                 <th>Tilmeldte Både</th>
                 <th></th>
+                <th></th>
             </tr>
             </thead>
             <tbody id="tableBody"></tbody>
         </table>
     </div>
 
-    <!--MODAL - PARTICIPANTS -->
-    <div id="modalForm" class="modal">
+    <!--MODAL - CONTESTANTS -->
+    <div id="modalContestants" class="modal">
         <div class="modal-content">
-            <h2 id=modalFormTitle></h2>
+            <h2 id=modalTitleContestants></h2>
             <span class="close">&times;</span>
-            <form id="form">
+            <form id="formContestants">
                 <input type="hidden" id="inpId" name="id">
                 <label for="inpBoats">Både:</label>
                 <select id="inpBoats" multiple>
@@ -59,19 +60,34 @@
     </div>
 
     <!-- MODAL - POINTS -->
-    <div id="scoreboardModal" class="modal">
+    <div id="modalPositions" class="modal">
         <div class="modal-content">
-            <h2 id=modalTitle></h2>
+            <h2 id=modalTitlePositions></h2>
             <span class="close">&times;</span>
-            <form id="formScorboard">
-            <table id="scoreboard">
+            <table id="tablePositions">
                 <tr>
-                    <th>Båd</th>
+                    <th>Båd ID</th>
+                    <th>Båd Navn</th>
                     <th>Position</th>
+                    <th></th>
                 </tr>
             </table>
-                <button type="submit" class="saveButton">Gem</button>
-            </form>
+                <button type="button" onclick="postPositions()" class="saveButton">Gem</button>
+        </div>
+    </div>
+
+    <!-- MODAL - RESULTS -->
+    <div id="modalResults" class="modal">
+        <div class="modal-content">
+            <h2 id=modalTitleResults></h2>
+            <span class="close">&times;</span>
+            <table id="tableResults">
+                <tr>
+                    <th>Båd ID</th>
+                    <th>Position</th>
+                    <th>Points</th>
+                </tr>
+            </table>
         </div>
     </div>
 </main>
