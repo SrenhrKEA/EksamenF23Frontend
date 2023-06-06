@@ -32,15 +32,17 @@ fetch('http://localhost:8080/race/list')
         <td>${boatNames}</td>
         <td>
           <button class="signUpOrWithdrawBtn" onclick="signUpOrWithdraw('${encodeURIComponent(JSON.stringify(race))}')">Tilmeld/Afmeld Både</button>
-          <button onclick="logPositions('${encodeURIComponent(JSON.stringify(race))}')">Endelige Placeringer</button>
+          <button class="logPositionBtn" onclick="logPositions('${encodeURIComponent(JSON.stringify(race))}')">Indtast Placeringer</button>
           <button onclick="showResult(${race.raceId})">Se Resultat</button>
         </td>
       `;
 
             // Hide signUpOrWithdrawBtn button if raceDate is before currentDate
             const signUpOrWithdrawBtn = row.querySelector('.signUpOrWithdrawBtn');
+            const logPositionBtn = row.querySelector('.logPositionBtn');
             if (raceDate < currentDate) {
                 signUpOrWithdrawBtn.style.display = 'none';
+                logPositionBtn.style.display = 'none';
             }
 
             tableBody.appendChild(row);
@@ -67,7 +69,7 @@ function signUpOrWithdraw(obj) {
 
 /*--LOG POSITIONS--*/
 function logPositions(obj) {
-    modalTitlePositions.textContent = 'Endelige positioner'
+    modalTitlePositions.textContent = 'Placeringer'
     openModalPositions(obj)
 }
 
