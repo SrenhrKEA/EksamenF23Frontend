@@ -345,6 +345,11 @@ async function postPositions() {
 /*--FETCH RESULTS -- */
 async function fetchResults(obj) {
 
+    // Clear existing rows
+    while (tableResults.rows.length > 1) {
+        tableResults.deleteRow(1);
+    }
+
     let URL = 'http://localhost:8080/score/list/race/' + obj;
 
     fetch(URL, {

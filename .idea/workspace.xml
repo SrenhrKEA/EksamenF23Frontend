@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcae023b-5010-4d87-8a5f-268ceae60073" name="Changes" comment="commit">
+    <list default="true" id="bcae023b-5010-4d87-8a5f-268ceae60073" name="Changes" comment="rettelser">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/race_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/race_table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/boat_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/boat_table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/race_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/race_table.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +81,7 @@
       <workItem from="1685954033868" duration="90000" />
       <workItem from="1685971185333" duration="5464000" />
       <workItem from="1685992266696" duration="8157000" />
-      <workItem from="1686031575902" duration="1357000" />
+      <workItem from="1686031575902" duration="2096000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1685678580413</created>
@@ -92,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685678580413</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="rettelser">
+      <created>1686032960957</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686032960957</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +105,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="rettelser" />
+    <option name="LAST_COMMIT_MESSAGE" value="rettelser" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
